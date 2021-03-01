@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="main">
+            <img src="img/backgr_pers.png" alt="">
+
+                <!-- Левая секция -->
+
+                <div class="content_left">
+                    <div class="list_header">                   
+                        ОКРУЖЕНИЕ                
+                    </div>
+                    <div class="list_line"></div>
+                    <div class="top_area"></div>
+                    <div class="list_header">                   
+                        ОРУЖИЕ                
+                    </div>
+                    <div class="list_line"></div>
+                    <div class="bottom_area">
+                        <img src="img/gun_machine.png" alt="">
+
+                        <div class="list__row_gun">
+                            <div class="list__icon_gun">  
+                            </div>
+                            <div class="list__icon_gun">
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <div class="exit">
+                        <button class="esc">ESC</button>
+                        <a href="#">Выйти</a>
+                    </div>
+                </div>
+
+                <!-- Центральная секция -->
+                <div class="content_center">
+
+                    <div class="invent_group" id="1_1" style="margin-left: 84px; margin-top: 30px;" >
+                        <div class="arrow_left" id="1">
+                            <img src="img/arrow_left.svg" alt="">
+                        </div>
+                        <div class="list__icon inv">  
+                        </div>
+                    </div>
+
+                    <div class="invent_group hidden" id="1_2" style="margin-left: 10px; margin-top: 30px;" >
+                        <div class="arrow_left" id="2">
+                            <img src="img/arrow_right.svg" alt="">
+                        </div>
+                        <div class="list__icon inv">  
+                        </div>
+                        <div class="list__icon inv">  
+                        </div>
+                        <div class="list__icon inv">  
+                        </div>
+                    </div>
+
+                    <div class="invent_group" style="margin-left: 10px; margin-top: 37px;" >
+                        <div class="arrow_left">
+                            <img src="img/arrow_right.svg" alt="">
+                        </div>
+                        <div class="list__icon inv">  
+                        </div>
+                        <div class="list__icon inv">  
+                        </div>
+                        <div class="list__icon inv">  
+                        </div>
+                    </div>
+
+                    <div class="invent_group" style="margin-left: 60px; margin-top: 35px;" >
+                        <div class="arrow_left">
+                            <img src="img/arrow_right.svg" alt="">
+                        </div>
+                        <div class="list__icon inv">  
+                        </div>
+                        <div class="list__icon inv">  
+                        </div>
+                    </div>
+
+                    <div class="invent_group" style="margin-left: 84px; margin-top: 35px;" >
+                        <div class="arrow_left">
+                            <img src="img/arrow_left.svg" alt="">
+                        </div>
+                        <div class="list__icon inv">  
+                        </div>
+                    </div>
+
+                    
+                    <div class="side_column">
+                        <div class="list_header column">                   
+                            КАРМАНЫ                
+                        </div>
+                        <div class="list_line column"></div>
+                        <div class="list__icon">  
+                        </div>
+                        <div class="list__icon" id="dashed"> <img src="img/plus.svg" alt="">
+                        </div>
+                        <div class="list_header column" style="margin-top: 8px;">                   
+                            $0,00                
+                        </div>
+                        <div class="list_header column" style="margin-top: 54px;">                   
+                            ТАЙНИК                
+                        </div>
+                        <div class="list_line column"></div>
+                        <div class="list__icon">  
+                        </div>
+                        <div class="list__icon">
+                        </div>
+                        <div class="list__icon" id="dashed">  <img src="img/plus.svg" alt="">
+                        </div>
+
+                    </div>
+
+                    <div class="res_name">Объем: 8.8 L</div>
+                    <div class="res_line">
+                        <div class="res_line_prog"></div>
+                    </div>
+                    <div class="res_name">Вес: 12.4 Kg</div>
+                    <div class="res_line">
+                        <div id="weight" class="res_line_prog"></div>
+                    </div>
+                    <div class="list__item">
+                        <div class="list__row">
+                            <div class="list__icon">  
+                            </div>
+                            <div class="list__icon">
+                            </div>
+                            <div class="list__icon">
+                            </div>
+                            <div class="list__icon">
+                            </div>  
+                            <div class="list__icon">
+                            </div> 
+                            <div class="list__icon">
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="list__item">
+                        <div class="list__row">
+                            <div class="list__icon">  
+                            </div>
+                            <div class="list__icon">
+                            </div>
+                            <div class="list__icon">
+                            </div>
+                            <div class="list__icon">
+                            </div>  
+                            <div class="list__icon">
+                            </div> 
+                            <div class="list__icon">
+                            </div> 
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+
+                <!-- Правая секция -->
+                <div class="content_right">
+                    
+                            <div class="list_header">                   
+                                РАЗГРУЗКА / РЮКЗАК                
+                            </div>
+                            <div class="list_line"></div>
+
+                            <div class="list__item">
+                                <div class="list__row">
+                                    <div class="list__icon">  
+                                    </div>
+                                    <div class="list__icon">
+                                    </div>
+                                    <div class="list__icon">
+                                    </div>
+                                    <div class="list__icon">
+                                    </div>  
+                                </div>
+                            </div>
+                            <div class="list__item" style="margin-bottom: 32px;">
+                                <div class="list__row">
+                                    <div class="list__icon">  
+                                    </div>
+                                    <div class="list__icon">
+                                    </div>
+                                    <div class="list__icon">
+                                    </div>
+                                    <div class="list__icon">
+                                    </div>  
+                                </div>
+                            </div>
+
+                            <div class="list_header">                   
+                                ЛИЧНЫЕ ВЕЩИ                
+                            </div>
+                            <div class="list_line"></div>
+
+
+                            <div class="list" style="margin-top: 4px; height: 345px; overflow-y: scroll; padding-right: 14px;">
+                                <div class="list__item" v-for="item in listItems">
+                                    <div class="list__row">
+                                        <div class="list__icon">
+                                            <div>{{ item.id }}</div>
+                                        </div>
+                                        <div class="list__icon">
+                                            <div>{{ item.id }}</div>
+                                        </div>
+                                        <div class="list__icon">
+                                            <div>{{ item.id }}</div>
+                                        </div>
+                                        <div class="list__icon">
+                                            <div>{{ item.id }}</div>
+                                        </div>  
+                                    </div>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                    
+
+                </div>
+
+        </div>
+        
+        
+    </div>
+
+
+    <script>
+        var app = new Vue({
+            el: '.main',
+            data: {
+                listItems: [
+                    
+                    { id: ''},
+                    { id: '' },
+                    { id: ''},
+                    { id: ''},
+                    { id: ''},
+                    { id: ''},
+                    { id: ''},
+                    { id: ''},
+                    { id: ''},
+                    { id: ''},
+                ]
+            },
+            mounted() {
+        
+            }
+        })
+        </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
+
+
+
